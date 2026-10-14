@@ -51,12 +51,12 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
               Request Received
             </h3>
             <p className="mt-2 text-sm text-neutral-600 max-w-sm mx-auto">
-              Our founding engineering team will review your organization&apos;s footprint and connect within 1 business day.
+              Our operations coordination team will review your mobility requirements and connect within 1 business day.
             </p>
             <div className="mt-6 p-4 rounded-lg bg-white border border-[#E6E3DC] text-left text-xs font-mono space-y-1 text-neutral-700">
               <div><strong className="text-neutral-500">Contact:</strong> {formData.email}</div>
               <div><strong className="text-neutral-500">Org:</strong> {formData.company || 'Enterprise'} ({formData.teamSize} members)</div>
-              <div><strong className="text-neutral-500">Routing:</strong> Direct Principal Engineer Pairing</div>
+              <div><strong className="text-neutral-500">Routing:</strong> Direct Operations Specialist Pairing</div>
             </div>
             <button
               onClick={handleReset}
@@ -70,14 +70,14 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
             <div className="flex items-center gap-2 mb-2">
               <ZaroLogo className="w-5 h-5 text-neutral-900" />
               <span className="text-xs font-mono tracking-widest uppercase text-neutral-500">
-                Direct Engineering Access
+                Direct Operations Access
               </span>
             </div>
             <h2 className="text-2xl font-bold text-neutral-900 tracking-tight">
               Talk to our team
             </h2>
             <p className="text-sm text-neutral-600 mt-1 mb-6">
-              Learn how Zaro replaces outdated documentation wikis with a living knowledge graph directly attributable to company work.
+              Learn how Ridership coordinates riders, verified drivers, motorcycles, and cars across Kigali, Rubavu, and Musanze with transparent fares.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -88,7 +88,7 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
                 <input
                   type="text"
                   required
-                  placeholder="Elena Rostova"
+                  placeholder="Jean-Paul Mugisha"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-md border border-[#D5D1C7] bg-white text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all placeholder:text-neutral-400"
@@ -102,7 +102,7 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
                 <input
                   type="email"
                   required
-                  placeholder="elena@company.com"
+                  placeholder="jeanpaul@fleet.rw"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-md border border-[#D5D1C7] bg-white text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all placeholder:text-neutral-400"
@@ -112,12 +112,12 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1">
-                    Company
+                    Organization / Fleet
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Acme Systems"
+                    placeholder="Kigali Express Fleet"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-md border border-[#D5D1C7] bg-white text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all placeholder:text-neutral-400"
@@ -125,29 +125,29 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1">
-                    Team Size
+                    Fleet / Team Size
                   </label>
                   <select
                     value={formData.teamSize}
                     onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-md border border-[#D5D1C7] bg-white text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all"
                   >
-                    <option value="1-20">1 - 20 employees</option>
-                    <option value="20-50">20 - 50 employees</option>
-                    <option value="50-250">50 - 250 employees</option>
-                    <option value="250-1000">250 - 1,000 employees</option>
-                    <option value="1000+">1,000+ enterprise</option>
+                    <option value="1-20">1 - 20 vehicles</option>
+                    <option value="20-50">20 - 50 vehicles</option>
+                    <option value="50-250">50 - 250 vehicles</option>
+                    <option value="250-1000">250 - 1,000 vehicles</option>
+                    <option value="1000+">1,000+ regional network</option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-neutral-800 uppercase tracking-wider mb-1">
-                  Primary Knowledge Bottleneck
+                  Primary Mobility Need
                 </label>
                 <textarea
                   rows={2}
-                  placeholder="E.g., Stale internal documentation, undocumented systems architecture, high onboarding friction..."
+                  placeholder="E.g., Corporate rider commutes, intercity cargo dispatch Kigali-Rubavu, driver fleet onboarding..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-md border border-[#D5D1C7] bg-white text-sm text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 transition-all placeholder:text-neutral-400 resize-none"
@@ -158,7 +158,7 @@ export function ConsultationModal({ isOpen, onClose }: ModalProps) {
                 type="submit"
                 className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-[#1A1816] text-white py-3 rounded-md text-sm font-medium hover:bg-neutral-800 transition-colors shadow-xs cursor-pointer"
               >
-                <span>Request Technical Briefing</span>
+                <span>Request Mobility Briefing</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -177,25 +177,25 @@ export function HowItWorksModal({ isOpen, onClose }: ModalProps) {
 
   const steps = [
     {
-      title: '1. Ingest Real Work Streams',
-      subtitle: 'Passive observation of actual business output',
-      desc: 'Zaro connects directly to your source repositories (GitHub/GitLab), CRM (Salesforce), project management (Jira), and communication channels (Slack). It never asks humans to write manual summaries.',
+      title: '1. Request Trip & Fare Estimate',
+      subtitle: 'Transparent booking before departure',
+      desc: 'Riders select pickup and destination across Kigali, Rubavu, or Musanze. Ridership calculates transparent fares with zero arbitrary surges before matching.',
       icon: <GitPullRequest className="w-5 h-5 text-indigo-600" />,
-      detail: 'Analyzes code commits, PR descriptions, schema migrations, customer resolutions, and contract approvals.',
+      detail: 'Calculates route distance, traffic telemetry, and vehicle type (motorcycle or car).',
     },
     {
-      title: '2. Reconcile Ground Truth',
-      subtitle: 'Eliminating the drift between docs and reality',
-      desc: 'When engineering changes an API schema or sales alters pricing terms, Zaro detects the delta between what is written in legacy wikis and what actually executed.',
+      title: '2. Verified Driver Matching',
+      subtitle: 'Vetted drivers and inspected vehicles',
+      desc: 'Every driver on Ridership is background-verified with active driving license, valid vehicle inspection, and registered ownership before accepting rides.',
       icon: <Database className="w-5 h-5 text-emerald-600" />,
-      detail: 'Creates immutable attribution links tying each architectural fact back to the exact engineer, PR, or CRM opportunity.',
+      detail: 'Real-time dispatch matches the closest available verified driver within minutes.',
     },
     {
-      title: '3. Autonomous Model Rewrite',
-      subtitle: 'Knowledge stays perpetually live',
-      desc: 'Instead of dead Confluence pages that rot over 6 months, Zaro maintains one unified graph that rewrites itself at the moment of change.',
+      title: '3. Live Trip & Wallet Settlement',
+      subtitle: 'Secure, auditable journey completion',
+      desc: 'Trips are tracked end-to-end with live GPS coordinates, in-app emergency SOS protocols, and instant cashless wallet deductions upon arrival.',
       icon: <Sparkles className="w-5 h-5 text-purple-600" />,
-      detail: 'Every stakeholder queries a single source of truth that is always 100% current and attributable.',
+      detail: 'Rider wallet balance is updated instantly with complete ride receipt and driver payout ledger.',
     },
   ];
 
@@ -213,14 +213,14 @@ export function HowItWorksModal({ isOpen, onClose }: ModalProps) {
         <div className="flex items-center gap-2 mb-2">
           <ZaroLogo className="w-5 h-5 text-neutral-900" />
           <span className="text-xs font-mono tracking-widest uppercase text-neutral-500">
-            Mechanism & Architecture
+            Mobility Coordination Engine
           </span>
         </div>
         <h2 className="text-2xl font-bold text-neutral-900 tracking-tight">
-          How Zaro Works
+          How Ridership Works
         </h2>
         <p className="text-sm text-neutral-600 mt-1 mb-6">
-          Traditional documentation rots the instant it is committed. Zaro inverts the model by treating work itself as the documentation writer.
+          Traditional hailing leaves riders stranded and drivers unpaid. Ridership unifies trip requests, fare estimates, and fleet dispatch in real time.
         </p>
 
         {/* Step selector tabs */}
@@ -259,7 +259,7 @@ export function HowItWorksModal({ isOpen, onClose }: ModalProps) {
             {steps[activeStep].desc}
           </p>
           <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-mono">
-            <span>Attribution Guarantee:</span>
+            <span>Trip Guarantee:</span>
             <span className="text-neutral-900 font-medium">{steps[activeStep].detail}</span>
           </div>
         </div>
@@ -306,11 +306,11 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
           <div className="w-10 h-10 rounded-full bg-white border border-[#E6E3DC] flex items-center justify-center mx-auto mb-3 shadow-2xs">
             <ZaroLogo className="w-5 h-5 text-neutral-900" />
           </div>
-          <h2 className="text-xl font-bold text-neutral-900 tracking-tight">
-            Sign in to Zaro
+          <h2 className="text-xl font-bold text-neutral-900 tracking-tight font-brand uppercase">
+            Sign in to RIDERSHIP
           </h2>
           <p className="text-xs text-neutral-500 mt-1">
-            Access your organization&apos;s living knowledge graph
+            Access your rider account, driver portal, or fleet management
           </p>
         </div>
 
@@ -353,7 +353,7 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
                 />
               </svg>
-              <span>Continue with Google Workspace</span>
+              <span>Continue with Google</span>
             </button>
 
             <button
@@ -361,7 +361,7 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
               className="w-full py-2.5 px-3 bg-white border border-[#D5D1C7] rounded-md text-xs font-medium text-neutral-800 hover:bg-neutral-50 flex items-center justify-center gap-2 transition-colors cursor-pointer"
             >
               <Shield className="w-4 h-4 text-neutral-600" />
-              <span>Sign in with Enterprise SSO (Okta / Entra)</span>
+              <span>Sign in with Fleet SSO / Partner Login</span>
             </button>
 
             <div className="relative my-3">
@@ -369,7 +369,7 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
                 <div className="w-full border-t border-[#E6E3DC]" />
               </div>
               <div className="relative flex justify-center text-[10px] uppercase font-mono">
-                <span className="bg-[#FAF8F5] px-2 text-neutral-400">or work email</span>
+                <span className="bg-[#FAF8F5] px-2 text-neutral-400">or account email</span>
               </div>
             </div>
 
@@ -383,7 +383,7 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
               <input
                 type="email"
                 required
-                placeholder="you@company.com"
+                placeholder="you@email.rw"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 rounded-md border border-[#D5D1C7] bg-white text-xs text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-800 placeholder:text-neutral-400"
@@ -401,3 +401,90 @@ export function SignInModal({ isOpen, onClose }: ModalProps) {
     </div>
   );
 }
+
+// 4. "Explore Security" Modal
+export function SecurityModal({ isOpen, onClose }: ModalProps) {
+  if (!isOpen) return null;
+
+  const securityPillars = [
+    {
+      title: 'Verified Drivers & Inspected Vehicles',
+      desc: 'Every driver undergoes strict identity checks, background screening, and annual vehicle roadworthiness tests before taking trips.',
+      tag: '100% VERIFIED DRIVERS',
+    },
+    {
+      title: 'End-to-End Trip Tracking & Audit',
+      desc: 'Every pickup, route detour, dropoff, and fare calculation is logged in real-time with continuous GPS telemetry.',
+      tag: 'REAL-TIME GPS AUDIT',
+    },
+    {
+      title: 'Secure Digital Wallet & Fares',
+      desc: 'Transparent fares calculated upfront. Riders pay seamlessly from their wallet with zero cash disputes and instant driver settlements.',
+      tag: 'INSTANT WALLET PAY',
+    },
+    {
+      title: '24/7 Operations & Emergency SOS',
+      desc: 'Real-time monitoring agents and one-tap in-app emergency SOS dispatch for immediate assistance across any journey.',
+      tag: '24/7 MONITORING AGENTS',
+    },
+  ];
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+      <div className="relative w-full max-w-2xl bg-[#1C1917] border border-[#3E3A35] text-white rounded-2xl shadow-2xl p-6 sm:p-8">
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 p-1.5 text-neutral-400 hover:text-white rounded-md transition-colors"
+          aria-label="Close modal"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        <div className="flex items-center gap-2 mb-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#84BFCB]" />
+          <span className="text-xs font-mono tracking-widest uppercase text-[#84BFCB]">
+            Ridership Trust & Safety Architecture
+          </span>
+        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-white">
+          Safety & Verification Across Every Journey
+        </h2>
+        <p className="text-xs sm:text-sm text-[#A8A29E] mt-1 mb-6">
+          How Ridership delivers rider-first protection for passengers, drivers, and fleet operators.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          {securityPillars.map((p, idx) => (
+            <div
+              key={idx}
+              className="p-4 rounded-xl bg-[#292524] border border-[#3E3A35] flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#1C1917] text-[#84BFCB] border border-[#44403C]">
+                  {p.tag}
+                </span>
+                <h3 className="text-sm font-semibold text-white mt-2 mb-1">
+                  {p.title}
+                </h3>
+                <p className="text-xs text-[#A8A29E] leading-relaxed">
+                  {p.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="pt-4 border-t border-[#3E3A35] flex items-center justify-between text-xs text-[#A8A29E] font-mono">
+          <span>Operational Coverage: Kigali · Rubavu · Musanze | Safety-first mobility</span>
+          <button
+            onClick={onClose}
+            className="px-4 py-2 bg-[#84BFCB] text-[#0F172A] font-semibold rounded-md hover:bg-[#92CBD7] transition-colors"
+          >
+            Close Overview
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+

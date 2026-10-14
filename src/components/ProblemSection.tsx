@@ -36,50 +36,50 @@ interface ProblemCardData {
 const CARDS: ProblemCardData[] = [
   {
     number: '01',
-    badgeTitle: 'The data warehouse.',
-    headlineLine1: 'Solved the numbers.',
-    headlineLine2: 'Not the knowledge.',
+    badgeTitle: 'Unmetered street hailing.',
+    headlineLine1: 'Haggled prices.',
+    headlineLine2: 'Zero fare transparency.',
     description:
-      'It made structured data queryable. Most of what your company knows was never in a table.',
+      'Cash negotiations on roadside corners leave both rider and driver disputing unpredictable travel costs.',
     techs: [
-      { name: 'Fabric', icon: <FabricLogo /> },
-      { name: 'Snowflake', icon: <SnowflakeLogo /> },
-      { name: 'Databricks', icon: <DatabricksLogo /> },
+      { name: 'Street Cash', icon: <FabricLogo /> },
+      { name: 'Roadside Stands', icon: <SnowflakeLogo /> },
+      { name: 'Haggled Fares', icon: <DatabricksLogo /> },
     ],
     imageSrc: DATA_WAREHOUSE_IMG,
-    altText: 'Minimalist 3D architectural folders representing data warehouse storage',
+    altText: 'Unregulated street taxi stands and motorcycles without transparent meter pricing',
     fallbackBg: 'from-slate-700 via-slate-800 to-slate-900',
   },
   {
     number: '02',
-    badgeTitle: 'A license for everyone.',
-    headlineLine1: 'An assistant for everyone.',
-    headlineLine2: 'A memory for no one.',
+    badgeTitle: 'Disconnected phone hails.',
+    headlineLine1: 'A driver on the phone.',
+    headlineLine2: 'No live trip tracking.',
     description:
-      'The right first move. It gave every person an assistant and the company no shared memory.',
+      'Calling drivers directly creates uncertainty. Nobody knows arrival times, route detours, or pickup status.',
     techs: [
-      { name: 'Copilot', icon: <CopilotLogo /> },
-      { name: 'ChatGPT', icon: <ChatGPTLogo /> },
-      { name: 'Gemini', icon: <GeminiLogo /> },
+      { name: 'Phone Calls', icon: <CopilotLogo /> },
+      { name: 'Unknown ETA', icon: <ChatGPTLogo /> },
+      { name: 'Zero GPS', icon: <GeminiLogo /> },
     ],
     imageSrc: LICENSE_EVERYONE_IMG,
-    altText: 'Team member working diligently with laptop and notes in workspace',
+    altText: 'Calling unverified drivers without live GPS location tracking',
     fallbackBg: 'from-amber-900/60 via-stone-800 to-stone-900',
   },
   {
     number: '03',
-    badgeTitle: 'A knowledge graph.',
-    headlineLine1: 'Built once.',
-    headlineLine2: 'True on the day it shipped.',
+    badgeTitle: 'Single-city dispatch.',
+    headlineLine1: 'Limited to one hub.',
+    headlineLine2: 'Offline once you travel.',
     description:
-      'It reads from a snapshot and never writes back, so it is out of date until someone rebuilds it.',
+      'Built for select urban centers. The moment you travel to Rubavu or Musanze, coordination completely breaks.',
     techs: [
-      { name: 'Glean', icon: <GleanLogo /> },
-      { name: 'Palantir', icon: <PalantirLogo /> },
-      { name: 'Sinequa', icon: <SinequaLogo /> },
+      { name: 'Single City', icon: <GleanLogo /> },
+      { name: 'Manual Hubs', icon: <PalantirLogo /> },
+      { name: 'No Intercity Sync', icon: <SinequaLogo /> },
     ],
     imageSrc: KNOWLEDGE_GRAPH_IMG,
-    altText: 'Topological 3D point cloud landscape representing brittle knowledge graphs',
+    altText: 'Regional transport gaps across intercity routes',
     fallbackBg: 'from-blue-900 via-indigo-950 to-black',
   },
 ];
@@ -93,8 +93,8 @@ export function ProblemSection() {
         {/* Section Headline */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-[-0.03em] text-[#1A1816] leading-[1.07] select-text">
-            You have already bought the<br />
-            AI. It cannot read your business.
+            You have already tried booking apps.<br />
+            They cannot coordinate real mobility.
           </h2>
         </div>
 

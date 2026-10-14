@@ -16,15 +16,15 @@ export function Hero({ onOpenConsultation, onOpenHowItWorks }: HeroProps) {
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Display Headline */}
             <h1 className="text-6xl sm:text-7xl lg:text-[84px] font-bold tracking-[-0.035em] text-[#1A1816] leading-[1.01] select-text">
-              Perfect<br />
-              knowledge<br />
+              Smarter<br />
+              mobility<br />
               is here.
             </h1>
 
             {/* Subtitle / Value Proposition */}
             <p className="mt-7 text-lg sm:text-[19.5px] leading-relaxed text-[#5F5C55] max-w-[480px] font-normal tracking-[-0.01em]">
-              One current, attributable account of how your business actually
-              runs, rewritten by the work itself as the business changes.
+              A rider-first platform connecting verified drivers, transparent fares,
+              and live trip tracking across Kigali, Rubavu, and Musanze.
             </p>
 
             {/* CTA Buttons */}

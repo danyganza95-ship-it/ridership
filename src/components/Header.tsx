@@ -32,11 +32,11 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
           <a
             href="/"
             className="flex items-center gap-2.5 text-[#1A1816] hover:opacity-90 transition-opacity"
-            aria-label="Zaro Home"
+            aria-label="RIDERSHIP Home"
           >
             <ZaroLogo className="w-6 h-6 text-[#1A1816]" />
-            <span className="text-2xl font-bold tracking-tight text-[#1A1816]">
-              Zaro
+            <span className="font-brand text-2xl font-black tracking-tight text-[#1A1816] uppercase">
+              RIDERSHIP
             </span>
           </a>
         </div>
@@ -54,7 +54,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
             }}
             className="hover:text-black transition-colors whitespace-nowrap shrink-0"
           >
-            Why Zaro
+            Why Ridership
           </a>
           <a
             href="#platform"
@@ -74,7 +74,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
             }}
             className="hover:text-black transition-colors whitespace-nowrap shrink-0"
           >
-            Perfect Knowledge
+            Smart Mobility
           </a>
           <a
             href="#security"
@@ -84,7 +84,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
             }}
             className="hover:text-black transition-colors whitespace-nowrap shrink-0"
           >
-            Security
+            Safety
           </a>
 
           {/* Resources with chevron dropdown */}
@@ -121,10 +121,10 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
                   <Cpu className="w-4 h-4 text-neutral-500 group-hover:text-neutral-900 mt-0.5 shrink-0" />
                   <div>
                     <div className="text-xs font-semibold text-neutral-900">
-                      Attribution Architecture
+                      Dispatch Engine
                     </div>
                     <div className="text-[11px] text-neutral-500 leading-tight mt-0.5">
-                      Technical whitepaper on graph rewrites
+                      Real-time trip matching & routing architecture
                     </div>
                   </div>
                 </a>
@@ -141,10 +141,10 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
                   <ShieldCheck className="w-4 h-4 text-neutral-500 group-hover:text-neutral-900 mt-0.5 shrink-0" />
                   <div>
                     <div className="text-xs font-semibold text-neutral-900">
-                      Security & SOC 2 Type II
+                      Rider & Driver Safety
                     </div>
                     <div className="text-[11px] text-neutral-500 leading-tight mt-0.5">
-                      Zero data persistence guarantees
+                      Verified drivers, SOS alerts & vehicle checks
                     </div>
                   </div>
                 </a>
@@ -161,10 +161,10 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
                   <GitBranch className="w-4 h-4 text-neutral-500 group-hover:text-neutral-900 mt-0.5 shrink-0" />
                   <div>
                     <div className="text-xs font-semibold text-neutral-900">
-                      Connectors & API
+                      Fleet & Partner APIs
                     </div>
                     <div className="text-[11px] text-neutral-500 leading-tight mt-0.5">
-                      Salesforce, GitHub, Jira, and Slack integrations
+                      Driver telemetry, payments, and fleet management
                     </div>
                   </div>
                 </a>
@@ -181,10 +181,10 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
                   <Users className="w-4 h-4 text-neutral-500 group-hover:text-neutral-900 mt-0.5 shrink-0" />
                   <div>
                     <div className="text-xs font-semibold text-neutral-900">
-                      Customer Case Studies
+                      Rider & Operator Stories
                     </div>
                     <div className="text-[11px] text-neutral-500 leading-tight mt-0.5">
-                      How high-velocity orgs operate with Zaro
+                      How riders and fleets move with Ridership
                     </div>
                   </div>
                 </a>
@@ -234,7 +234,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
               }}
               className="py-1 hover:text-black"
             >
-              Why Zaro
+              Why Ridership
             </a>
             <a
               href="#platform"
@@ -254,7 +254,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
               }}
               className="py-1 hover:text-black"
             >
-              Perfect Knowledge
+              Smart Mobility
             </a>
             <a
               href="#security"
@@ -264,7 +264,7 @@ export function Header({ onOpenConsultation, onOpenSignIn, onNavigateSection }: 
               }}
               className="py-1 hover:text-black"
             >
-              Security
+              Safety
             </a>
           </nav>
           <div className="pt-3 border-t border-[#E6E3DC] flex flex-col gap-3">

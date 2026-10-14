@@ -8,21 +8,28 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { TrustBar } from './components/TrustBar';
 import { ProblemSection } from './components/ProblemSection';
-import { ConsultationModal, HowItWorksModal, SignInModal } from './components/Modals';
+import { TrueKnowledgeSection } from './components/TrueKnowledgeSection';
+import { AttributedChatSection } from './components/AttributedChatSection';
+import { ComplianceStatementSection } from './components/ComplianceStatementSection';
+import { InteractiveVideoSection } from './components/InteractiveVideoSection';
+import { CompoundingRoiSection } from './components/CompoundingRoiSection';
+import { SecurityGovernanceSection } from './components/SecurityGovernanceSection';
+import { ThreeThingsSection } from './components/ThreeThingsSection';
+import { ConsultationModal, HowItWorksModal, SignInModal, SecurityModal } from './components/Modals';
 
 export default function App() {
   const [consultationOpen, setConsultationOpen] = useState(false);
   const [howItWorksOpen, setHowItWorksOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
+  const [securityModalOpen, setSecurityModalOpen] = useState(false);
   const [activeSectionNotice, setActiveSectionNotice] = useState<string | null>(null);
 
   const handleNavigateSection = (sectionId: string) => {
     if (sectionId === 'platform' || sectionId === 'architecture') {
       setHowItWorksOpen(true);
     } else if (sectionId === 'security') {
-      setActiveSectionNotice('Security & SOC 2 compliance documentation is available via technical consultation.');
-      setTimeout(() => setActiveSectionNotice(null), 4000);
-    } else if (sectionId === 'why-zaro' || sectionId === 'perfect-knowledge') {
+      setSecurityModalOpen(true);
+    } else if (sectionId === 'why-zaro' || sectionId === 'why-ridership' || sectionId === 'perfect-knowledge' || sectionId === 'smart-mobility') {
       // Scroll smoothly to hero headline
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -46,18 +53,39 @@ export default function App() {
         onNavigateSection={handleNavigateSection}
       />
 
-      {/* 2. Hero Section with Headline & Isometric Knowledge Diagram */}
+      {/* 2. Hero Section with Headline & Isometric Mobility Diagram */}
       <main className="flex-1">
         <Hero
           onOpenConsultation={() => setConsultationOpen(true)}
           onOpenHowItWorks={() => setHowItWorksOpen(true)}
         />
 
-        {/* 3. Proof Strip: "BUILT BY THE TEAM FROM" & "BACKED BY" */}
+        {/* 3. Proof Strip: "BUILT BY OPERATORS FROM" & "BACKED BY" */}
         <TrustBar />
 
-        {/* 4. Problem Statement / Feature Grid: "You have already bought the AI" */}
+        {/* 4. Problem Statement / Feature Grid: "You have already tried booking apps" */}
         <ProblemSection />
+
+        {/* 5. Continuous Coordination: "Legacy dispatch tells you what was parked..." */}
+        <TrueKnowledgeSection />
+
+        {/* 6. Living Attributed Chat: "Why did this trip pickup delay occur..." */}
+        <AttributedChatSection />
+
+        {/* 7. Compliance & Audit Statement: "Inspect any trip behind your ride history..." */}
+        <ComplianceStatementSection />
+
+        {/* 8. Interactive Video Component: Allowed / Blocked / Audited */}
+        <InteractiveVideoSection />
+
+        {/* 9. Compounding Network Curves: "The first journey pays for itself..." */}
+        <CompoundingRoiSection />
+
+        {/* 10. Security & Governance: "Protected across every mile of your journey" */}
+        <SecurityGovernanceSection onOpenSecurityModal={() => setSecurityModalOpen(true)} />
+
+        {/* 11. Feature Intro & Carousel: "Three things Ridership can do." */}
+        <ThreeThingsSection />
       </main>
 
       {/* Interactive Modals */}
@@ -72,6 +100,10 @@ export default function App() {
       <SignInModal
         isOpen={signInOpen}
         onClose={() => setSignInOpen(false)}
+      />
+      <SecurityModal
+        isOpen={securityModalOpen}
+        onClose={() => setSecurityModalOpen(false)}
       />
     </div>
   );

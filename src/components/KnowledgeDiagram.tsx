@@ -16,22 +16,22 @@ export function KnowledgeDiagram() {
 
   const layerData: Record<'top' | 'middle' | 'bottom', LayerInfo> = {
     top: {
-      title: 'Current Attributable Knowledge',
+      title: 'Live Fleet & Active Dispatch',
       tag: 'STATE: LIVE',
-      desc: 'One perpetually synchronized source of truth, rewritten dynamically as changes occur.',
-      stats: '100% Attributable · 0 Stale Docs',
+      desc: 'One synchronized coordinate network of verified drivers, motorcycles, and cars across Kigali, Rubavu, and Musanze.',
+      stats: '100% Verified Drivers · 0 Stale Trips',
     },
     middle: {
-      title: 'Autonomous Workstream Ingestion',
+      title: 'Trip Ingestion & Fare Engine',
       tag: 'STREAM: ACTIVE',
-      desc: 'Code diffs, CRM events, customer tickets, and engineering tasks re-grounding the model.',
-      stats: '94.2 events/min · Continuous Reconciliation',
+      desc: 'GPS telemetry, booking requests, rider wallet updates, and route traffic continuously updating estimated fares.',
+      stats: '94.2 rides/min · Continuous Coordination',
     },
     bottom: {
-      title: 'Foundational Enterprise Base',
+      title: 'Foundational Mobility Infrastructure',
       tag: 'BASE: VERIFIED',
-      desc: 'Underlying operational graph recording immutable business semantics and schemas.',
-      stats: 'Historical Lineage · Cryptographically Audited',
+      desc: 'Underlying municipal road network recording immutable trip history, driver compliance, and payment records.',
+      stats: 'Audited Trips · Verified Vehicle Registry',
     },
   };
 
@@ -54,7 +54,7 @@ export function KnowledgeDiagram() {
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto overflow-visible filter drop-shadow-xs"
         role="img"
-        aria-label="Isometric diagram of Zaro knowledge model with time travel axis"
+        aria-label="Isometric diagram of Ridership mobility platform with trip tracking timeline"
       >
         <defs>
           {/* Subtle gradients for layers */}
@@ -439,10 +439,10 @@ export function KnowledgeDiagram() {
                 Timeline: <strong className="text-neutral-900 uppercase">{activeTime.replace(/_/g, ' ')}</strong>
               </span>
               <span className="text-neutral-400">·</span>
-              <span className="text-[11px]">Hover any isometric plane to inspect architectural layer</span>
+              <span className="text-[11px]">Hover any isometric plane to inspect mobility layer</span>
             </span>
             <span className="font-mono text-[10px] text-neutral-400 hidden sm:inline">
-              Attributable Graph
+              Real-time Fleet
             </span>
           </div>
         )}
